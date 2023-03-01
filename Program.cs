@@ -7,10 +7,7 @@ while(true)
         Console.WriteLine("Ошибка ввода");
 }
 
-
-
-
-if (chislo1%2==0) 
-Console.WriteLine($"Число {chislo1} четное");
-else 
-Console.WriteLine($"Число {chislo1} НЕ четное"); 
+int i=0;
+while (i<chislo1)
+{Console.Write(i+" ");
+i=i+2;}
