@@ -1,4 +1,4 @@
-﻿int chislo1, chislo2;
+﻿int chislo1, chislo2, chislo3;
 while(true)
 {
     Console.WriteLine("Введите первое число=");
@@ -14,8 +14,18 @@ while(true)
             break;
         Console.WriteLine("Ошибка ввода");
 }
+while(true)
+{
+    Console.WriteLine("Введите третье число=");
+        if (int.TryParse(Console.ReadLine(), out chislo3))
+            break;
+        Console.WriteLine("Ошибка ввода");
+}
+
 int max=chislo1;
 if (chislo2>max) 
-Console.WriteLine($"max={chislo2}");
+max=chislo2;
 else
-Console.WriteLine($"max={chislo1}");
+    if (chislo3>max)
+    max=chislo3;
+Console.WriteLine($"среди чисел {chislo1}, {chislo2}, {chislo3}, максимальное ->{max}");
